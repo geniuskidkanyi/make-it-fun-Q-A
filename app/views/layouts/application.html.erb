@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Snapit</title>
+  <title><%= yield(:title) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,18 +9,21 @@
 <body>
 <div class="container">
     <div class="header">
-        <div id="logo">Make It Fun Q&amp;A</div>
+        <div id="logo"><%= link_to 'Make It Fun Q&A', root_path %>
     </div>
+      <% flash.each do | key, value| %>
+      <p id="message"><%= value %></p>
+      <% end %>
        <div class="nav">
            <ul>
                <li>
-
+                    <%= link_to 'Home', root_path %>
                </li>
            </ul>
        </div>
         <div class="content"><%= yield %></div>
         <div class="footer">
-
+        @copy; Make It Fun <%= Date.today.year %>
         </div>
 
 </div>
