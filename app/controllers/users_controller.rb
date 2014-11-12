@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     def create
     @user = User.new(user_params) ## Invoke user_params method
     if @user.save
-       redirect_to root_path @user, notice: 'Author was successfully created.'
+       redirect_to root_path @user, notice: 'user was successfully created.'
     else
       render action: 'new'
     end

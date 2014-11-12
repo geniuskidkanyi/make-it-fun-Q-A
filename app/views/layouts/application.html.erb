@@ -13,18 +13,30 @@
       </div>
 
 
-      <p id="flash"><%= flash.notice %></p>
+
 
        <div id="nav">
            <ul>
                <li>
                     <%= link_to 'Home', root_path %>
                </li>
+                   <%if logged_in? %>
+
                     <li>
+                    <%= link_to "logout (#{current_user.username})", '#'%>
+               </li>
+                   <% else %>
+                   <li>
                     <%= link_to 'Register', new_user_path %>
                </li>
+                   <li>
+                    <%= link_to 'login', new_session_path %>
+               </li>
+               <% end %>
+
            </ul>
        </div>
+        <p id="flash"><%= flash.notice %></p>
         <div id="content"><%= yield %></div>
         <div id="footer">
         &copy; Make It Fun <%= Date.today.year %>
