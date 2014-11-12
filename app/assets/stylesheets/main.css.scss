@@ -1,3 +1,4 @@
+@import "susy";
 /*
    Reset
    http://meyerweb.com/eric/tools/css/reset/
@@ -184,7 +185,7 @@ body {
 	}
 
 	/* Flash Message */
-	#message {
+	#flash {
 		background-color: #FCDDBB ;
 		border: 1px solid #555;
 		color: #000;
@@ -253,4 +254,3 @@ body {
 		margin-top: 20px;
 	}
 }
-

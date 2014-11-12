@@ -12,9 +12,9 @@
       <%= link_to 'Make It Fun Q&A', root_path %>
       </div>
 
-      <% flash.each do | key, value| %>
-      <p id="message"><%= value %></p>
-      <% end %>
+
+      <p id="flash"><%= flash.notice %></p>
+
        <div id="nav">
            <ul>
                <li>
