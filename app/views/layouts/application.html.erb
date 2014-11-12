@@ -7,26 +7,31 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container">
-    <div class="header">
-        <div id="logo"><%= link_to 'Make It Fun Q&A', root_path %>
-    </div>
+<div id="container">
+    <div id="header">
+      <%= link_to 'Make It Fun Q&A', root_path %>
+      </div>
+
       <% flash.each do | key, value| %>
       <p id="message"><%= value %></p>
       <% end %>
-       <div class="nav">
+       <div id="nav">
            <ul>
                <li>
                     <%= link_to 'Home', root_path %>
                </li>
+                    <li>
+                    <%= link_to 'Register', new_user_path %>
+               </li>
            </ul>
        </div>
-        <div class="content"><%= yield %></div>
-        <div class="footer">
-        @copy; Make It Fun <%= Date.today.year %>
+        <div id="content"><%= yield %></div>
+        <div id="footer">
+        &copy; Make It Fun <%= Date.today.year %>
         </div>
 
 </div>
+
 
 
 
