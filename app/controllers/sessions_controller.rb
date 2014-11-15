@@ -1,14 +1,18 @@
 class SessionsController < ApplicationController
-   def new
+
+  def new
   end
 
   def create
-    if login(params[:username], params[:password])
-      redirect_back_or_to(root_path, notice: 'Logged in successfully.')
-    else
-      flash.now.alert = "Login failed."
-      render action: :new
-    end
+  user = User.find_by_username(params[:username])
+  if user && user.authenticate(params[:password])
+
+
+    redirect_to root_url, :notice => "Logged in!"
+  else
+    flash.now.alert = "Invalid email or password"
+    render "new"
+  end
   end
 
 end

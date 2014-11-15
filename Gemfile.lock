@@ -83,6 +83,7 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    simple_login (0.0.8)
     spring (1.1.3)
     sprockets (2.12.3)
       hike (~> 1.2)
@@ -118,6 +119,7 @@ DEPENDENCIES
   rails (= 4.1.7)
   sass-rails (~> 5.0.0.beta1)
   sdoc (~> 0.4.0)
+  simple_login
   spring
   sqlite3
   susy

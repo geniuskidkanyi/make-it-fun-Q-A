@@ -3,8 +3,9 @@ root 'questions#index'
  resources :users, only: [:new, :create]
     resources :sessions, only: [ :new, :create, :destroy ]
 
+get 'register'  => 'user#new'
 get 'login'  => 'sessions#new'
-get 'logout' => 'sessions#destroy'
+get 'logout' => 'sessions#destroy', via: :delete
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
