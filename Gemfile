@@ -34,7 +34,7 @@ gem 'spring',        group: :development
 
 # Use unicorn as the app server
 # gem 'unicorn'
-gem 'simple_login'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -24,11 +24,13 @@
                        <li>
 
           <%= "Logged in as #{current_user.username}" %>
-          <%= link_to "(logout)", logout_path %>
+          <%= link_to "(logout)", logout_path, method: 'delete'%>
           </li>
         <% else %>
         <li>
          <%= link_to "(login)", login_path %>
+         </li><li>
+         <%= link_to "(register)", register_path %>
          </li>
          <% end %>
 
