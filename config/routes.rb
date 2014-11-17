@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 root 'questions#index'
  resources :users, only: [:new, :create]
     resources :sessions, only: [ :new, :create, :destroy ]
+    resources :question, except: [:new]
 
 get 'register'  => 'user#new'
 get 'login'  => 'sessions#new'

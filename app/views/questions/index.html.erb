@@ -1,2 +1,9 @@
 <%= provide(:title, 'Make It Snappy Q&amp;A') %>
-<h1>This is the make fun main page</h1>
+<div id="ask">
+<h1>Ask a question</h1>
+<% if logged_in? %>
+<%= render 'question_form' %>
+<% else %>
+<p>please login to ask a question</p>
+<% end %>
+</div>
