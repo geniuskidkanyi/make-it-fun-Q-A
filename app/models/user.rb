@@ -1,5 +1,6 @@
 require 'bcrypt'
 class User < ActiveRecord::Base
+    has_many :questions
 def user_params
     params.require(:user).permit(:username, :password_digest, :password, :password_confirmation)
   end
